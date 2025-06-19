@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Accordion Menü</title>
+  <style>
+    .accordion { background-color: #eee; padding: 14px; width: 100%; font-size: 16px; border: none; text-align: left; cursor: pointer; }
+    .panel { display: none; padding: 10px; background-color: #f9f9f9; }
+    .panel a { display: block; padding: 6px 0; text-decoration: none; color: #0066cc; }
+  </style>
+</head>
+<body>
+
+<h2>Ürünler</h2>
+<button class="accordion">Ürün Grupları</button>
+<div class="panel">
+  <a href="https://ornek.com/gubre">Gübre</a>
+  <a href="https://ornek.com/tohum">Tohum</a>
+  <a href="https://ornek.com/ilac">İlaç</a>
+</div>
+
+<script>
+  document.querySelector(".accordion").onclick = function () {
+    var panel = this.nextElementSibling;
+    panel.style.display = panel.style.display === "block" ? "none" : "block";
+  };
+</script>
+
+</body>
+</html>
